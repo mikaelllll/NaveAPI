@@ -7,7 +7,8 @@ class Administrator(models.Model):
     user = models.CharField(
         max_length = 255,
         null = False,
-        blank = False
+        blank = False,
+        unique = True
     )
 
     password = models.CharField(
@@ -19,7 +20,8 @@ class Administrator(models.Model):
     email = models.CharField(
         max_length=255,
         null=False,
-        blank=False
+        blank=False,
+        unique = True
     )
 
     objects = models.Manager()
@@ -29,7 +31,8 @@ class UserAdministrator(models.Model):
     user = models.CharField(
         max_length=255,
         null=False,
-        blank=False
+        blank=False,
+        unique = True
     )
 
     password = models.CharField(
@@ -41,7 +44,8 @@ class UserAdministrator(models.Model):
     email = models.CharField(
         max_length=255,
         null=False,
-        blank=False
+        blank=False,
+        unique = True
     )
 
     createDate = models.DateTimeField(
@@ -121,7 +125,8 @@ class User(models.Model):
     user = models.CharField(
         max_length=255,
         null=False,
-        blank=False
+        blank=False,
+        unique = True
     )
 
     password = models.CharField(
@@ -133,7 +138,8 @@ class User(models.Model):
     name = models.CharField(
         max_length=255,
         null=False,
-        blank=False
+        blank=False,
+        unique = True
     )
 
     email = models.CharField(
